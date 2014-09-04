@@ -12,25 +12,18 @@ public class AliceController : MonoBehaviour
 	float scaleChange;
 	float newScale;
 	float currentScale;
+	float scaleChangeSpeed;
 
 	float oldCamDistance;
-	float newCamDistance;
+	float camDistanceChangeSpeed;
 
 	float minScale;
 	float maxScale;
 
 	float walkSpeedMultiplier;
-	float newWalkSpeed;
-
 	float jumpHeightMultiplier;
-	float newJumpHeight;
-
 	float inAirControlAccelerationMultiplier;
-	float newinAirControlAcceleration;
-
 	float gravityMultiplier;
-	float newGravity;
-
 	float fogEndDistanceMultiplier;
 
 
@@ -56,16 +49,10 @@ public class AliceController : MonoBehaviour
 		gravityMultiplier = 10f;
 
 		newScale = currentScale;
-		newWalkSpeed = currentScale * walkSpeedMultiplier;
-		newJumpHeight = currentScale * jumpHeightMultiplier;
-		newinAirControlAcceleration = currentScale * inAirControlAccelerationMultiplier;
-		newGravity = currentScale * gravityMultiplier;
 
 		transform.localScale = new Vector3 (minScale, minScale, minScale);
 		
 		cam.distance = minScale * camDistChangeMultiplier;
-		oldCamDistance = cam.distance;
-		newCamDistance = cam.distance;
 		
 		playercont.walkSpeed = minScale * walkSpeedMultiplier;
 		playercont.jumpHeight = minScale * jumpHeightMultiplier;
@@ -73,7 +60,7 @@ public class AliceController : MonoBehaviour
 		playercont.gravity = minScale * gravityMultiplier;
 
 		RenderSettings.fog = false;
-		RenderSettings.fogEndDistance = minScale * 20f;
+		RenderSettings.fogEndDistance = minScale * fogEndDistanceMultiplier;
 	}
 
 	void Update ()
@@ -81,101 +68,50 @@ public class AliceController : MonoBehaviour
 		handleSizeChange();
 
 		if (transform.localScale.x >= maxScale) {
-			clampValues(maxScale);
+			setValues(maxScale);
 		}
 		if (transform.localScale.x <= minScale) {
-			clampValues(minScale);
+			setValues(minScale);
 		}
 	}
 
-	void clampValues(float scale){
+	void setValues(float scale){
 		transform.localScale = new Vector3 (scale, scale, scale);
 
-		cam.distance = Mathf.MoveTowards (cam.distance, scale * camDistChangeMultiplier,  Time.deltaTime * lerpTime);
+		camDistanceChangeSpeed = Time.deltaTime * Mathf.Abs ((scale * camDistChangeMultiplier) - cam.distance);
+		cam.distance = Mathf.MoveTowards (cam.distance, scale * camDistChangeMultiplier, camDistanceChangeSpeed);
 
 		playercont.walkSpeed = scale * walkSpeedMultiplier;
 		playercont.jumpHeight = scale * jumpHeightMultiplier;
 		playercont.inAirControlAcceleration = scale * inAirControlAccelerationMultiplier;
 		playercont.gravity = scale * gravityMultiplier;
 
-		RenderSettings.fogEndDistance = scale * 20f;
+		RenderSettings.fogEndDistance = scale * fogEndDistanceMultiplier;
 	}
 
-	void directScaleChange(float sc){
-		newCamDistance = (sc * camDistChangeMultiplier);
-		
-		currentScale = sc;
-		newWalkSpeed = sc * walkSpeedMultiplier;
-		newJumpHeight = sc * jumpHeightMultiplier;
-		newinAirControlAcceleration = sc * inAirControlAccelerationMultiplier;
-		newGravity = sc * gravityMultiplier;
-	}
 
 	void handleSizeChange(){
-		if(Input.GetKey(KeyCode.Alpha1)){
-			newScale = 1f;
-			directScaleChange(newScale);
+		if(Input.GetKeyDown(KeyCode.Alpha1) || Input.GetMouseButtonDown(1)){
+			if(newScale > minScale)
+				newScale = newScale / 2f;
 		}
-		if(Input.GetKey(KeyCode.Alpha2)){
-			newScale = 5f;
-			directScaleChange(newScale);
+		if(Input.GetKeyDown(KeyCode.Alpha2) || Input.GetMouseButtonDown(0)){
+			if(newScale < maxScale)
+				newScale = newScale * 2f;
 		}
 		if(Input.GetKey(KeyCode.Alpha3)){
-			newScale = 60f;
-			directScaleChange(newScale);
+			//newScale = 60f;
 		}
 
 
 		if (Input.GetAxis ("Mouse ScrollWheel") != 0) {
 			scaleChange = -Input.GetAxis ("Mouse ScrollWheel");
 
-			newCamDistance = cam.distance + (scaleChange * camDistChangeMultiplier);
-
-			newScale = transform.localScale.x + scaleChange;
-			newWalkSpeed = playercont.walkSpeed + (scaleChange * walkSpeedMultiplier);
-			newJumpHeight = playercont.jumpHeight + (scaleChange * jumpHeightMultiplier);
-			newinAirControlAcceleration = playercont.inAirControlAcceleration + (scaleChange * inAirControlAccelerationMultiplier);
-			newGravity = playercont.gravity + (scaleChange * gravityMultiplier);
+			newScale = transform.localScale.x + (scaleChange * 5f);
 		}
 
-		currentScale = Mathf.MoveTowards (transform.localScale.x, newScale,  Time.deltaTime * Mathf.Abs(newScale - transform.localScale.x));
-
-//		transform.localScale = new Vector3 (Mathf.MoveTowards (transform.localScale.x, newScale,  Time.deltaTime * Mathf.Abs(newScale - transform.localScale.x)), 
-//		                                    Mathf.MoveTowards (transform.localScale.y, newScale,  Time.deltaTime * Mathf.Abs(newScale - transform.localScale.x)), 
-//		                                    Mathf.MoveTowards (transform.localScale.z, newScale,  Time.deltaTime * Mathf.Abs(newScale - transform.localScale.x)));
-		                                 
-		transform.localScale = new Vector3 (currentScale, currentScale, currentScale);
-
-
-//		cam.distance = Mathf.MoveTowards (cam.distance, newCamDistance,  Time.deltaTime * Mathf.Abs(newCamDistance - cam.distance) / 2 );
-
-
-//		playercont.walkSpeed = Mathf.MoveTowards (playercont.walkSpeed, 
-//		                                          newWalkSpeed,  
-//		                                          Time.deltaTime * Mathf.Abs(newWalkSpeed - playercont.walkSpeed));
-
-
-
-//		playercont.jumpHeight =  Mathf.MoveTowards (playercont.jumpHeight, 
-//		                                            newJumpHeight,  
-//		                                            Time.deltaTime * lerpTime);
-//
-//
-//
-//		playercont.inAirControlAcceleration = Mathf.MoveTowards (playercont.inAirControlAcceleration, 
-//		                                                         newinAirControlAcceleration,  
-//		                                                         Time.deltaTime * lerpTime);
-//
-//		playercont.gravity = Mathf.MoveTowards (playercont.gravity, 
-//		                                        newGravity,  
-//		                                        Time.deltaTime * lerpTime);
-
-		cam.distance = currentScale * camDistChangeMultiplier;
-		playercont.walkSpeed = currentScale * walkSpeedMultiplier;
-		playercont.jumpHeight = currentScale * jumpHeightMultiplier;
-		playercont.inAirControlAcceleration = currentScale * inAirControlAccelerationMultiplier;
-		playercont.gravity = currentScale * gravityMultiplier;
-
-		RenderSettings.fogEndDistance -= Input.GetAxis ("Mouse ScrollWheel") * fogEndDistanceMultiplier;
+		scaleChangeSpeed = Time.deltaTime * Mathf.Abs (newScale - transform.localScale.x);
+		currentScale = Mathf.MoveTowards (transform.localScale.x, newScale, scaleChangeSpeed);                 
+		setValues(currentScale);
 	}
 }
