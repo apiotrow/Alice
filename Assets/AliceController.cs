@@ -5,22 +5,40 @@ public class AliceController : MonoBehaviour
 {
 	public MouseOrbitImproved cam;
 	public ThirdPersonControllerCS playercont;
+	float lerpTime;
+
 	public float camDistChangeMultiplier;
+
 	float scaleChange;
+	float newScale;
+	float currentScale;
+
 	float oldCamDistance;
 	float newCamDistance;
+
 	float minScale;
 	float maxScale;
+
 	float walkSpeedMultiplier;
+	float newWalkSpeed;
+
 	float jumpHeightMultiplier;
+	float newJumpHeight;
+
 	float inAirControlAccelerationMultiplier;
-	float fogEndDistanceMultiplier;
+	float newinAirControlAcceleration;
+
 	float gravityMultiplier;
+	float newGravity;
+
+	float fogEndDistanceMultiplier;
+
 
 	void Start ()
 	{
 		cam = Camera.main.GetComponent<MouseOrbitImproved> ();
 		playercont = gameObject.GetComponent<ThirdPersonControllerCS> ();
+		lerpTime = 20f;
 
 		camDistChangeMultiplier = 5f;
 
@@ -28,12 +46,20 @@ public class AliceController : MonoBehaviour
 		minScale = 1f;
 
 		scaleChange = 0f;
+		newScale = 1f;
+		currentScale = 1f;
 
 		walkSpeedMultiplier = 2f;
 		jumpHeightMultiplier = 1f;
-		inAirControlAccelerationMultiplier = 4f;
+		inAirControlAccelerationMultiplier = 20f;
 		fogEndDistanceMultiplier = 10f;
 		gravityMultiplier = 10f;
+
+		newScale = currentScale;
+		newWalkSpeed = currentScale * walkSpeedMultiplier;
+		newJumpHeight = currentScale * jumpHeightMultiplier;
+		newinAirControlAcceleration = currentScale * inAirControlAccelerationMultiplier;
+		newGravity = currentScale * gravityMultiplier;
 
 		transform.localScale = new Vector3 (minScale, minScale, minScale);
 		
@@ -65,7 +91,7 @@ public class AliceController : MonoBehaviour
 	void clampValues(float scale){
 		transform.localScale = new Vector3 (scale, scale, scale);
 
-		cam.distance = Mathf.MoveTowards (cam.distance, scale * camDistChangeMultiplier,  Time.deltaTime * 3f); ;
+		cam.distance = Mathf.MoveTowards (cam.distance, scale * camDistChangeMultiplier,  Time.deltaTime * lerpTime);
 
 		playercont.walkSpeed = scale * walkSpeedMultiplier;
 		playercont.jumpHeight = scale * jumpHeightMultiplier;
@@ -75,47 +101,80 @@ public class AliceController : MonoBehaviour
 		RenderSettings.fogEndDistance = scale * 20f;
 	}
 
+	void directScaleChange(float sc){
+		newCamDistance = (sc * camDistChangeMultiplier);
+		
+		currentScale = sc;
+		newWalkSpeed = sc * walkSpeedMultiplier;
+		newJumpHeight = sc * jumpHeightMultiplier;
+		newinAirControlAcceleration = sc * inAirControlAccelerationMultiplier;
+		newGravity = sc * gravityMultiplier;
+	}
+
 	void handleSizeChange(){
+		if(Input.GetKey(KeyCode.Alpha1)){
+			newScale = 1f;
+			directScaleChange(newScale);
+		}
+		if(Input.GetKey(KeyCode.Alpha2)){
+			newScale = 5f;
+			directScaleChange(newScale);
+		}
+		if(Input.GetKey(KeyCode.Alpha3)){
+			newScale = 60f;
+			directScaleChange(newScale);
+		}
+
 
 		if (Input.GetAxis ("Mouse ScrollWheel") != 0) {
 			scaleChange = -Input.GetAxis ("Mouse ScrollWheel");
 
 			newCamDistance = cam.distance + (scaleChange * camDistChangeMultiplier);
+
+			newScale = transform.localScale.x + scaleChange;
+			newWalkSpeed = playercont.walkSpeed + (scaleChange * walkSpeedMultiplier);
+			newJumpHeight = playercont.jumpHeight + (scaleChange * jumpHeightMultiplier);
+			newinAirControlAcceleration = playercont.inAirControlAcceleration + (scaleChange * inAirControlAccelerationMultiplier);
+			newGravity = playercont.gravity + (scaleChange * gravityMultiplier);
 		}
 
-//		transform.localScale -= new Vector3 (Input.GetAxis ("Mouse ScrollWheel"), 
-//		                                     Input.GetAxis ("Mouse ScrollWheel"), 
-//		                                     Input.GetAxis ("Mouse ScrollWheel"));
+		currentScale = Mathf.MoveTowards (transform.localScale.x, newScale,  Time.deltaTime * Mathf.Abs(newScale - transform.localScale.x));
 
-		transform.localScale =  new Vector3 (Mathf.MoveTowards (transform.localScale.x, scaleChange,  Time.deltaTime * 3f), 
-		                                     Mathf.MoveTowards (transform.localScale.y, scaleChange,  Time.deltaTime * 3f), 
-		                                     Mathf.MoveTowards (transform.localScale.z, scaleChange,  Time.deltaTime * 3f));;
+//		transform.localScale = new Vector3 (Mathf.MoveTowards (transform.localScale.x, newScale,  Time.deltaTime * Mathf.Abs(newScale - transform.localScale.x)), 
+//		                                    Mathf.MoveTowards (transform.localScale.y, newScale,  Time.deltaTime * Mathf.Abs(newScale - transform.localScale.x)), 
+//		                                    Mathf.MoveTowards (transform.localScale.z, newScale,  Time.deltaTime * Mathf.Abs(newScale - transform.localScale.x)));
+		                                 
+		transform.localScale = new Vector3 (currentScale, currentScale, currentScale);
 
-		//cam.distance -= Input.GetAxis ("Mouse ScrollWheel") * camDistChangeMultiplier;
 
-		//wheel has scrolled. get new camera distance from it.
+//		cam.distance = Mathf.MoveTowards (cam.distance, newCamDistance,  Time.deltaTime * Mathf.Abs(newCamDistance - cam.distance) / 2 );
 
-		//if new camera distance not achieved yet, keep lerping towards it.
-		//if (cam.distance != newCamDistance) {
-		//cam.distance += Mathf.MoveTowards (oldCamDistance, newCamDistance,  Time.deltaTime * 0.1f);
 
-		cam.distance = Mathf.MoveTowards (cam.distance, newCamDistance,  Time.deltaTime * 3f);
-		//if it has been achieved, set current camera distance to be the one we lerp from next time.
-//		} else {
-//			oldCamDistance = cam.distance;
+//		playercont.walkSpeed = Mathf.MoveTowards (playercont.walkSpeed, 
+//		                                          newWalkSpeed,  
+//		                                          Time.deltaTime * Mathf.Abs(newWalkSpeed - playercont.walkSpeed));
+
+
+
+//		playercont.jumpHeight =  Mathf.MoveTowards (playercont.jumpHeight, 
+//		                                            newJumpHeight,  
+//		                                            Time.deltaTime * lerpTime);
 //
-//		}
+//
+//
+//		playercont.inAirControlAcceleration = Mathf.MoveTowards (playercont.inAirControlAcceleration, 
+//		                                                         newinAirControlAcceleration,  
+//		                                                         Time.deltaTime * lerpTime);
+//
+//		playercont.gravity = Mathf.MoveTowards (playercont.gravity, 
+//		                                        newGravity,  
+//		                                        Time.deltaTime * lerpTime);
 
-		if (cam.distance == newCamDistance) {
-			oldCamDistance = cam.distance;
-		}
-
-
-
-		playercont.walkSpeed -= Input.GetAxis ("Mouse ScrollWheel") * walkSpeedMultiplier;
-		playercont.jumpHeight -= Input.GetAxis ("Mouse ScrollWheel") * jumpHeightMultiplier;
-		playercont.inAirControlAcceleration -= Input.GetAxis ("Mouse ScrollWheel") * inAirControlAccelerationMultiplier;
-		playercont.gravity -= Input.GetAxis ("Mouse ScrollWheel") * gravityMultiplier;
+		cam.distance = currentScale * camDistChangeMultiplier;
+		playercont.walkSpeed = currentScale * walkSpeedMultiplier;
+		playercont.jumpHeight = currentScale * jumpHeightMultiplier;
+		playercont.inAirControlAcceleration = currentScale * inAirControlAccelerationMultiplier;
+		playercont.gravity = currentScale * gravityMultiplier;
 
 		RenderSettings.fogEndDistance -= Input.GetAxis ("Mouse ScrollWheel") * fogEndDistanceMultiplier;
 	}
