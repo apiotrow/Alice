@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\AliceController.cs" />
+     <Compile Include="Assets\AlicePlanet.cs" />
      <Compile Include="Assets\AliceStyleCharacter\Script\CharaterManeger.cs" />
      <Compile Include="Assets\MouseOrbitImproved.cs" />
      <Compile Include="Assets\ThirdPersonControllerCS.cs" />

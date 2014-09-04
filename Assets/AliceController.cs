@@ -3,6 +3,8 @@ using System.Collections;
 
 public class AliceController : MonoBehaviour
 {
+	public AlicePlanet alicePlanet;
+
 	public MouseOrbitImproved cam;
 	public ThirdPersonControllerCS playercont;
 	float lerpTime;
@@ -29,6 +31,7 @@ public class AliceController : MonoBehaviour
 
 	void Start ()
 	{
+
 		cam = Camera.main.GetComponent<MouseOrbitImproved> ();
 		playercont = gameObject.GetComponent<ThirdPersonControllerCS> ();
 		lerpTime = 20f;
@@ -43,10 +46,10 @@ public class AliceController : MonoBehaviour
 		currentScale = 1f;
 
 		walkSpeedMultiplier = 2f;
-		jumpHeightMultiplier = 1f;
-		inAirControlAccelerationMultiplier = 20f;
+		jumpHeightMultiplier = 4f;
+		inAirControlAccelerationMultiplier = 2f;
 		fogEndDistanceMultiplier = 10f;
-		gravityMultiplier = 10f;
+		gravityMultiplier = 0f;
 
 		newScale = currentScale;
 
@@ -65,6 +68,14 @@ public class AliceController : MonoBehaviour
 
 	void Update ()
 	{
+		transform.up = -(alicePlanet.transform.position - transform.position);
+		Debug.DrawRay (transform.position, transform.up, Color.green, 5f);
+
+		//rigidbody.AddForce (new Vector3(0, 1, 0) * 10f);
+		rigidbody.AddForce(-transform.up * 10f);
+		//Vector3.MoveTowards (transform.position, alicePlanet.transform.position, Time.deltaTime * 1f);
+		//transform.Translate (Vector3.down);
+
 		handleSizeChange();
 
 		if (transform.localScale.x >= maxScale) {
