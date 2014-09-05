@@ -4,6 +4,7 @@ using System.Collections;
 public class AliceController : MonoBehaviour
 {
 	public AlicePlanet alicePlanet;
+	public Transform makeSmallerObject;
 
 	public MouseOrbitImproved cam;
 	public ThirdPersonControllerCS playercont;
@@ -23,6 +24,7 @@ public class AliceController : MonoBehaviour
 	float maxScale;
 
 	float walkSpeedMultiplier;
+	float runSpeedMultiplier;
 	float jumpHeightMultiplier;
 	float inAirControlAccelerationMultiplier;
 	float gravityMultiplier;
@@ -38,7 +40,7 @@ public class AliceController : MonoBehaviour
 
 		camDistChangeMultiplier = 5f;
 
-		maxScale = 200f;
+		maxScale = 2000f;
 		minScale = 1f;
 
 		scaleChange = 0f;
@@ -46,10 +48,11 @@ public class AliceController : MonoBehaviour
 		currentScale = 1f;
 
 		walkSpeedMultiplier = 2f;
+		runSpeedMultiplier = 4f;
 		jumpHeightMultiplier = 4f;
 		inAirControlAccelerationMultiplier = 2f;
 		fogEndDistanceMultiplier = 10f;
-		gravityMultiplier = 0f;
+		gravityMultiplier = 20f;
 
 		newScale = currentScale;
 
@@ -58,6 +61,7 @@ public class AliceController : MonoBehaviour
 		cam.distance = minScale * camDistChangeMultiplier;
 		
 		playercont.walkSpeed = minScale * walkSpeedMultiplier;
+		playercont.runSpeed = minScale * runSpeedMultiplier;
 		playercont.jumpHeight = minScale * jumpHeightMultiplier;
 		playercont.inAirControlAcceleration = minScale * inAirControlAccelerationMultiplier;
 		playercont.gravity = minScale * gravityMultiplier;
@@ -66,16 +70,10 @@ public class AliceController : MonoBehaviour
 		RenderSettings.fogEndDistance = minScale * fogEndDistanceMultiplier;
 	}
 
+
+
 	void Update ()
 	{
-		transform.up = -(alicePlanet.transform.position - transform.position);
-		Debug.DrawRay (transform.position, transform.up, Color.green, 5f);
-
-		//rigidbody.AddForce (new Vector3(0, 1, 0) * 10f);
-		rigidbody.AddForce(-transform.up * 10f);
-		//Vector3.MoveTowards (transform.position, alicePlanet.transform.position, Time.deltaTime * 1f);
-		//transform.Translate (Vector3.down);
-
 		handleSizeChange();
 
 		if (transform.localScale.x >= maxScale) {
@@ -93,6 +91,7 @@ public class AliceController : MonoBehaviour
 		cam.distance = Mathf.MoveTowards (cam.distance, scale * camDistChangeMultiplier, camDistanceChangeSpeed);
 
 		playercont.walkSpeed = scale * walkSpeedMultiplier;
+		playercont.runSpeed = scale * runSpeedMultiplier;
 		playercont.jumpHeight = scale * jumpHeightMultiplier;
 		playercont.inAirControlAcceleration = scale * inAirControlAccelerationMultiplier;
 		playercont.gravity = scale * gravityMultiplier;
@@ -100,8 +99,7 @@ public class AliceController : MonoBehaviour
 		RenderSettings.fogEndDistance = scale * fogEndDistanceMultiplier;
 	}
 
-
-	void handleSizeChange(){
+	void sizeChangeByInput(){
 		if(Input.GetKeyDown(KeyCode.Alpha1) || Input.GetMouseButtonDown(1)){
 			if(newScale > minScale)
 				newScale = newScale / 2f;
@@ -110,19 +108,40 @@ public class AliceController : MonoBehaviour
 			if(newScale < maxScale)
 				newScale = newScale * 2f;
 		}
-		if(Input.GetKey(KeyCode.Alpha3)){
-			//newScale = 60f;
-		}
-
 
 		if (Input.GetAxis ("Mouse ScrollWheel") != 0) {
 			scaleChange = -Input.GetAxis ("Mouse ScrollWheel");
 
 			newScale = transform.localScale.x + (scaleChange * 5f);
 		}
+	}
+
+	void sizeChangeByDistanceToObject(Transform obj, float multiplier){
+		float distToObject;
+		distToObject = Vector3.Distance (obj.position, transform.position);
+		newScale = distToObject * multiplier;
+	}
+
+
+	void handleSizeChange(){
+		sizeChangeByInput ();
+		sizeChangeByDistanceToObject (makeSmallerObject, 0.1f);
 
 		scaleChangeSpeed = Time.deltaTime * Mathf.Abs (newScale - transform.localScale.x);
 		currentScale = Mathf.MoveTowards (transform.localScale.x, newScale, scaleChangeSpeed);                 
 		setValues(currentScale);
+	}
+	
+	void applySphericalGravity(){
+		transform.up = -(alicePlanet.transform.position - transform.position);
+		Debug.DrawRay (transform.position, transform.up, Color.green, 5f);
+		rigidbody.AddForce (-transform.up * 30f);
+		
+		if(Input.GetKey(KeyCode.W)){
+			rigidbody.AddForce(transform.forward * 10f);
+		}
+		if(Input.GetKey(KeyCode.Space)){
+			rigidbody.AddForce(transform.up * 50f);
+		}
 	}
 }

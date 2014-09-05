@@ -17,6 +17,12 @@ public class MouseOrbitImproved : MonoBehaviour {
 	
 	float x = 0.0f;
 	float y = 0.0f;
+
+	public float minDistance = 0.5f;
+	public float maxDistance = 15f;
+	public float smooth = 10.0f;
+	
+	Vector3 dollyDir;
 	
 	// Use this for initialization
 	void Start () {
@@ -27,6 +33,9 @@ public class MouseOrbitImproved : MonoBehaviour {
 		// Make the rigid body not change rotation
 		if (rigidbody)
 			rigidbody.freezeRotation = true;
+
+		dollyDir = transform.localPosition.normalized;
+		distance = transform.localPosition.magnitude;
 	}
 	
 	void LateUpdate () {
@@ -39,11 +48,20 @@ public class MouseOrbitImproved : MonoBehaviour {
 			Quaternion rotation = Quaternion.Euler(y, x, 0);
 			
 			//distance = Mathf.Clamp(distance - Input.GetAxis("Mouse ScrollWheel")*165, distanceMin, distanceMax);
+
+			Vector3 desiredCameraPos = transform.TransformPoint( dollyDir * maxDistance );
 			
 			RaycastHit hit;
-			if (Physics.Linecast (target.position, transform.position, out hit)) {
-				//distance -=  hit.distance;
-			}
+//			if (Physics.Linecast (target.position, transform.position, out hit)) {
+//				distance -=  hit.distance;
+//			}
+			if( Physics.Linecast( transform.position, desiredCameraPos, out hit ) )
+            {
+                //distance = Mathf.Clamp( hit.distance, minDistance, maxDistance );
+            }else
+            {
+                //distance=maxDistance;
+            }
 			Vector3 negDistance = new Vector3(0.0f, 0.0f, -distance);
 			Vector3 position = rotation * negDistance + target.position;
 			

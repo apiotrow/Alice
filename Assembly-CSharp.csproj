@@ -49,7 +49,12 @@
      <Compile Include="Assets\AliceController.cs" />
      <Compile Include="Assets\AlicePlanet.cs" />
      <Compile Include="Assets\AliceStyleCharacter\Script\CharaterManeger.cs" />
+     <Compile Include="Assets\MathFunctions.cs" />
+     <Compile Include="Assets\MouseLookX.cs" />
+     <Compile Include="Assets\MouseLookY.cs" />
      <Compile Include="Assets\MouseOrbitImproved.cs" />
+     <Compile Include="Assets\Movement.cs" />
+     <Compile Include="Assets\OrbitCamera.cs" />
      <Compile Include="Assets\ThirdPersonControllerCS.cs" />
      <Compile Include="Assets\city_lowpoly\Standard Assets\Image Effects (Pro Only)\BlurEffect.cs" />
      <Compile Include="Assets\city_lowpoly\Standard Assets\Image Effects (Pro Only)\ColorCorrectionEffect.cs" />
