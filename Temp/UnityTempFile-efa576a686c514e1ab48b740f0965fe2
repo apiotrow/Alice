@@ -1,0 +1,63 @@
+-debug
+-target:library
+-nowarn:0169
+-out:'Temp/Assembly-CSharp.dll'
+-r:'/Applications/Unity/Unity.app/Contents/PlaybackEngines/WebPlayer/Managed/UnityEngine.dll'
+-r:'Library/ScriptAssemblies/Assembly-CSharp-firstpass.dll'
+-r:'Library/ScriptAssemblies/Assembly-UnityScript-firstpass.dll'
+-define:UNITY_4_5_1
+-define:UNITY_4_5
+-define:UNITY_WEBPLAYER
+-define:WEBPLUG
+-define:ENABLE_MICROPHONE
+-define:ENABLE_TEXTUREID_MAP
+-define:ENABLE_UNITYEVENTS
+-define:ENABLE_NEW_HIERARCHY 
+-define:ENABLE_AUDIO_FMOD
+-define:ENABLE_MONO
+-define:ENABLE_TERRAIN
+-define:ENABLE_SUBSTANCE
+-define:ENABLE_GENERICS
+-define:INCLUDE_WP8SUPPORT
+-define:ENABLE_MOVIES
+-define:ENABLE_WWW
+-define:ENABLE_IMAGEEFFECTS
+-define:ENABLE_WEBCAM
+-define:INCLUDE_METROSUPPORT
+-define:RENDER_SOFTWARE_CURSOR
+-define:ENABLE_NETWORK
+-define:ENABLE_PHYSICS
+-define:ENABLE_CACHING
+-define:ENABLE_CLOTH
+-define:ENABLE_2D_PHYSICS
+-define:ENABLE_SHADOWS
+-define:ENABLE_AUDIO
+-define:ENABLE_NAVMESH_CARVING
+-define:ENABLE_DUCK_TYPING
+-define:ENABLE_SINGLE_INSTANCE_BUILD_SETTING
+-define:UNITY_PRO_LICENSE
+'Assets/AliceStyleCharacter/Script/CharaterManeger.cs'
+'Assets/Scripts/AliceController.cs'
+'Assets/Scripts/AlicePlanet.cs'
+'Assets/Scripts/MouseOrbitImproved.cs'
+'Assets/Scripts/ThirdPersonControllerCS.cs'
+'Assets/Scripts/World1Controller.cs'
+'Assets/ScriptsExperimental/MathFunctions.cs'
+'Assets/ScriptsExperimental/MouseLookX.cs'
+'Assets/ScriptsExperimental/MouseLookY.cs'
+'Assets/ScriptsExperimental/Movement.cs'
+'Assets/ScriptsExperimental/OrbitCamera.cs'
+'Assets/city_lowpoly/Standard Assets/Image Effects (Pro Only)/BlurEffect.cs'
+'Assets/city_lowpoly/Standard Assets/Image Effects (Pro Only)/ColorCorrectionEffect.cs'
+'Assets/city_lowpoly/Standard Assets/Image Effects (Pro Only)/ContrastStretchEffect.cs'
+'Assets/city_lowpoly/Standard Assets/Image Effects (Pro Only)/EdgeDetectEffect.cs'
+'Assets/city_lowpoly/Standard Assets/Image Effects (Pro Only)/GlowEffect.cs'
+'Assets/city_lowpoly/Standard Assets/Image Effects (Pro Only)/GrayscaleEffect.cs'
+'Assets/city_lowpoly/Standard Assets/Image Effects (Pro Only)/ImageEffectBase.cs'
+'Assets/city_lowpoly/Standard Assets/Image Effects (Pro Only)/ImageEffects.cs'
+'Assets/city_lowpoly/Standard Assets/Image Effects (Pro Only)/MotionBlur.cs'
+'Assets/city_lowpoly/Standard Assets/Image Effects (Pro Only)/NoiseEffect.cs'
+'Assets/city_lowpoly/Standard Assets/Image Effects (Pro Only)/SSAOEffect.cs'
+'Assets/city_lowpoly/Standard Assets/Image Effects (Pro Only)/SepiaToneEffect.cs'
+'Assets/city_lowpoly/Standard Assets/Image Effects (Pro Only)/TwirlEffect.cs'
+'Assets/city_lowpoly/Standard Assets/Image Effects (Pro Only)/VortexEffect.cs'
