@@ -1,11 +1,12 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="../CrowdSimulation/Assets/PlanetController.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/AliceController.cs">
     <Files>
       <File FileName="../Planetary_Lander/Assets/PlayerController.cs" Line="832" Column="32" />
       <File FileName="../CrowdSimulation/Assets/PlanetController.cs" Line="135" Column="3" />
       <File FileName="Assets/Scripts/ThirdPersonControllerCS.cs" Line="81" Column="1" />
-      <File FileName="Assets/Scripts/AliceController.cs" Line="80" Column="3" />
+      <File FileName="Assets/Scripts/AliceController.cs" Line="37" Column="56" />
+      <File FileName="../CrowdSimulation/Assets/TheGUI.cs" Line="95" Column="33" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

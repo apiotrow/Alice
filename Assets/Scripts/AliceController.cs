@@ -30,6 +30,14 @@ public class AliceController : MonoBehaviour
 	float gravityMultiplier;
 	float fogEndDistanceMultiplier;
 
+	bool manualSizeChanging;
+
+	void OnGUI(){
+		string text;
+		text = "Manual Size Changing: " + manualSizeChanging;
+		GUI.Box (new Rect (Screen.width - 200, 0, 200, 30), text);
+	}
+
 
 	void Start ()
 	{
@@ -68,14 +76,20 @@ public class AliceController : MonoBehaviour
 
 		RenderSettings.fog = false;
 		RenderSettings.fogEndDistance = minScale * fogEndDistanceMultiplier;
+
+		manualSizeChanging = false;
 	}
 
 
 
 	void Update ()
 	{
-		if (Input.GetKey (KeyCode.R)) {
+		if (Input.GetKeyDown (KeyCode.R)) {
 			Application.LoadLevel (0); 
+		}
+
+		if(Input.GetKeyDown(KeyCode.T)){
+			manualSizeChanging = !manualSizeChanging;
 		}
 
 		handleSizeChange();
@@ -104,11 +118,11 @@ public class AliceController : MonoBehaviour
 	}
 
 	void sizeChangeByInput(){
-		if(Input.GetKeyDown(KeyCode.Alpha1) || Input.GetMouseButtonDown(1)){
+		if(Input.GetKeyDown(KeyCode.Alpha2)/* || Input.GetMouseButtonDown(1)*/){
 			if(newScale > minScale)
 				newScale = newScale / 2f;
 		}
-		if(Input.GetKeyDown(KeyCode.Alpha2) || Input.GetMouseButtonDown(0)){
+		if(Input.GetKeyDown(KeyCode.Alpha1) /*|| Input.GetMouseButtonDown(0)*/){
 			if(newScale < maxScale)
 				newScale = newScale * 2f;
 		}
@@ -128,8 +142,11 @@ public class AliceController : MonoBehaviour
 
 
 	void handleSizeChange(){
-		sizeChangeByInput ();
-		sizeChangeByDistanceToObject (makeSmallerObject, 0.1f);
+		if (!manualSizeChanging) {
+			sizeChangeByDistanceToObject (makeSmallerObject, 0.1f);
+		} else {
+			sizeChangeByInput ();
+		}
 
 		scaleChangeSpeed = Time.deltaTime * Mathf.Abs (newScale - transform.localScale.x);
 		currentScale = Mathf.MoveTowards (transform.localScale.x, newScale, scaleChangeSpeed);                 
