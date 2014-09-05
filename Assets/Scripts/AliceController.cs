@@ -74,6 +74,10 @@ public class AliceController : MonoBehaviour
 
 	void Update ()
 	{
+		if (Input.GetKey (KeyCode.R)) {
+			Application.LoadLevel (0); 
+		}
+
 		handleSizeChange();
 
 		if (transform.localScale.x >= maxScale) {
