@@ -2,84 +2,196 @@ Base path: /Applications/Unity/Unity.app/Contents
 Pipe name: \\.\pipe\UnityShaderCompiler-1--1597574744
 Cmd: getPlatforms
 Cmd: compileSnippet
-  api=4 type=0 insize=4822 outsize=2607 kw=DIRECTIONAL SHADOWS_OFF LIGHTMAP_OFF DIRLIGHTMAP_OFF ok=1
+  api=4 type=0 insize=10526 outsize=990 kw= ok=1
 Cmd: compileSnippet
-  api=8 type=0 insize=4822 outsize=3811 kw=DIRECTIONAL SHADOWS_OFF LIGHTMAP_OFF DIRLIGHTMAP_OFF ok=1
+  api=8 type=0 insize=10526 outsize=1438 kw= ok=1
 Cmd: compileSnippet
-  api=1 type=0 insize=4822 outsize=190 kw=DIRECTIONAL SHADOWS_OFF LIGHTMAP_ON DIRLIGHTMAP_OFF ok=1
+  api=4 type=1 insize=10526 outsize=1672 kw= ok=1
 Cmd: compileSnippet
-  api=8 type=0 insize=4822 outsize=2048 kw=DIRECTIONAL SHADOWS_OFF LIGHTMAP_ON DIRLIGHTMAP_OFF ok=1
+  api=4 type=0 insize=10549 outsize=990 kw= ok=1
 Cmd: compileSnippet
-  api=4 type=0 insize=4822 outsize=2997 kw=DIRECTIONAL SHADOWS_SCREEN LIGHTMAP_OFF DIRLIGHTMAP_OFF ok=1
+  api=4 type=1 insize=10549 outsize=9269 kw= ok=1
 Cmd: compileSnippet
-  api=0 type=0 insize=4822 outsize=540 kw=DIRECTIONAL SHADOWS_SCREEN LIGHTMAP_ON DIRLIGHTMAP_OFF ok=1
+  api=4 type=0 insize=10548 outsize=990 kw= ok=1
 Cmd: compileSnippet
-  api=4 type=0 insize=4822 outsize=1883 kw=DIRECTIONAL SHADOWS_SCREEN LIGHTMAP_ON DIRLIGHTMAP_OFF ok=1
+  api=4 type=1 insize=10548 outsize=9285 kw= ok=1
 Cmd: compileSnippet
-  api=8 type=0 insize=4822 outsize=2665 kw=DIRECTIONAL SHADOWS_SCREEN LIGHTMAP_ON DIRLIGHTMAP_OFF ok=1
+  api=4 type=0 insize=995 outsize=990 kw= ok=1
 Cmd: compileSnippet
-  api=1 type=0 insize=4822 outsize=1146 kw=DIRECTIONAL SHADOWS_OFF LIGHTMAP_OFF DIRLIGHTMAP_OFF VERTEXLIGHT_ON ok=1
+  api=8 type=0 insize=995 outsize=1438 kw= ok=1
 Cmd: compileSnippet
-  api=8 type=0 insize=4822 outsize=6582 kw=DIRECTIONAL SHADOWS_OFF LIGHTMAP_OFF DIRLIGHTMAP_OFF VERTEXLIGHT_ON ok=1
+  api=4 type=1 insize=995 outsize=957 kw= ok=1
 Cmd: compileSnippet
-  api=4 type=0 insize=4822 outsize=4719 kw=DIRECTIONAL SHADOWS_SCREEN LIGHTMAP_OFF DIRLIGHTMAP_OFF VERTEXLIGHT_ON ok=1
+  api=8 type=1 insize=995 outsize=1438 kw= ok=1
 Cmd: compileSnippet
-  api=4 type=1 insize=4822 outsize=1453 kw=DIRECTIONAL SHADOWS_OFF LIGHTMAP_OFF DIRLIGHTMAP_OFF ok=1
+  api=4 type=0 insize=1183 outsize=1737 kw= ok=1
 Cmd: compileSnippet
-  api=1 type=1 insize=4822 outsize=225 kw=DIRECTIONAL SHADOWS_OFF LIGHTMAP_ON DIRLIGHTMAP_OFF ok=1
+  api=8 type=0 insize=1183 outsize=2454 kw= ok=1
 Cmd: compileSnippet
-  api=4 type=1 insize=4822 outsize=1128 kw=DIRECTIONAL SHADOWS_OFF LIGHTMAP_ON DIRLIGHTMAP_OFF ok=1
+  api=4 type=1 insize=1183 outsize=1396 kw= ok=1
 Cmd: compileSnippet
-  api=1 type=1 insize=4822 outsize=404 kw=DIRECTIONAL SHADOWS_SCREEN LIGHTMAP_OFF DIRLIGHTMAP_OFF ok=1
+  api=4 type=0 insize=2000 outsize=1339 kw= ok=1
 Cmd: compileSnippet
-  api=8 type=1 insize=4822 outsize=2690 kw=DIRECTIONAL SHADOWS_SCREEN LIGHTMAP_OFF DIRLIGHTMAP_OFF ok=1
+  api=8 type=0 insize=2000 outsize=1577 kw= ok=1
 Cmd: compileSnippet
-  api=1 type=1 insize=4822 outsize=385 kw=DIRECTIONAL SHADOWS_SCREEN LIGHTMAP_ON DIRLIGHTMAP_OFF ok=1
+  api=4 type=1 insize=2000 outsize=1201 kw= ok=1
 Cmd: compileSnippet
-  api=8 type=1 insize=4822 outsize=2511 kw=DIRECTIONAL SHADOWS_SCREEN LIGHTMAP_ON DIRLIGHTMAP_OFF ok=1
+  api=4 type=0 insize=1998 outsize=1339 kw= ok=1
 Cmd: compileSnippet
-  api=4 type=0 insize=2798 outsize=2875 kw=POINT ok=1
+  api=8 type=0 insize=1998 outsize=1577 kw= ok=1
 Cmd: compileSnippet
-  api=8 type=0 insize=2798 outsize=4128 kw=POINT ok=1
+  api=4 type=1 insize=1998 outsize=933 kw= ok=1
 Cmd: compileSnippet
-  api=8 type=0 insize=2798 outsize=2608 kw=DIRECTIONAL ok=1
+  api=4 type=0 insize=2011 outsize=1640 kw= ok=1
 Cmd: compileSnippet
-  api=4 type=0 insize=2798 outsize=2875 kw=SPOT ok=1
+  api=8 type=0 insize=2011 outsize=2324 kw= ok=1
 Cmd: compileSnippet
-  api=0 type=0 insize=2798 outsize=817 kw=POINT_COOKIE ok=1
+  api=4 type=1 insize=2011 outsize=1307 kw= ok=1
 Cmd: compileSnippet
-  api=1 type=0 insize=2798 outsize=383 kw=POINT_COOKIE ok=1
+  api=4 type=0 insize=2009 outsize=1339 kw= ok=1
 Cmd: compileSnippet
-  api=1 type=0 insize=2798 outsize=359 kw=DIRECTIONAL_COOKIE ok=1
+  api=8 type=0 insize=2009 outsize=1577 kw= ok=1
 Cmd: compileSnippet
-  api=4 type=0 insize=2798 outsize=2542 kw=DIRECTIONAL_COOKIE ok=1
+  api=4 type=1 insize=2009 outsize=852 kw= ok=1
 Cmd: compileSnippet
-  api=1 type=1 insize=2798 outsize=538 kw=POINT ok=1
+  api=4 type=0 insize=968 outsize=990 kw= ok=1
 Cmd: compileSnippet
-  api=8 type=1 insize=2798 outsize=2690 kw=POINT ok=1
+  api=8 type=0 insize=968 outsize=1438 kw= ok=1
 Cmd: compileSnippet
-  api=8 type=1 insize=2798 outsize=2040 kw=DIRECTIONAL ok=1
+  api=4 type=1 insize=968 outsize=990 kw= ok=1
 Cmd: compileSnippet
-  api=4 type=1 insize=2798 outsize=2249 kw=SPOT ok=1
+  api=4 type=0 insize=32644 outsize=990 kw= ok=1
 Cmd: compileSnippet
-  api=0 type=1 insize=2798 outsize=734 kw=POINT_COOKIE ok=1
+  api=4 type=1 insize=32644 outsize=10675 kw= ok=1
 Cmd: compileSnippet
-  api=1 type=1 insize=2798 outsize=586 kw=POINT_COOKIE ok=1
+  api=4 type=0 insize=1607 outsize=1737 kw= ok=1
 Cmd: compileSnippet
-  api=8 type=1 insize=2798 outsize=2917 kw=POINT_COOKIE ok=1
+  api=8 type=0 insize=1607 outsize=2495 kw= ok=1
 Cmd: compileSnippet
-  api=8 type=1 insize=2798 outsize=2422 kw=DIRECTIONAL_COOKIE ok=1
+  api=4 type=1 insize=1607 outsize=2355 kw= ok=1
 Cmd: compileSnippet
-  api=4 type=0 insize=867 outsize=1599 kw= ok=1
+  api=4 type=0 insize=20010 outsize=1298 kw= ok=1
 Cmd: compileSnippet
-  api=8 type=0 insize=867 outsize=2381 kw= ok=1
+  api=4 type=1 insize=20010 outsize=1298 kw= ok=1
 Cmd: compileSnippet
-  api=4 type=1 insize=867 outsize=502 kw= ok=1
+  api=4 type=0 insize=20005 outsize=1298 kw= ok=1
 Cmd: compileSnippet
-  api=8 type=1 insize=867 outsize=675 kw= ok=1
+  api=4 type=1 insize=20005 outsize=827 kw= ok=1
 Cmd: compileSnippet
-  api=4 type=0 insize=1135 outsize=1461 kw= ok=1
+  api=4 type=0 insize=20021 outsize=2241 kw= ok=1
 Cmd: compileSnippet
-  api=8 type=0 insize=1135 outsize=2088 kw= ok=1
+  api=4 type=1 insize=20021 outsize=2550 kw= ok=1
 Cmd: compileSnippet
-  api=4 type=1 insize=1135 outsize=1071 kw= ok=1
+  api=4 type=0 insize=20006 outsize=1298 kw= ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=20006 outsize=1298 kw= ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=20016 outsize=1298 kw= ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=20016 outsize=1290 kw= ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=20015 outsize=1298 kw= ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=20015 outsize=3338 kw= ok=1
+Cmd: compileSnippet
+  api=1 type=0 insize=19971 outsize=335 kw= ok=1
+Cmd: compileSnippet
+  api=1 type=1 insize=19971 outsize=450 kw= ok=1
+Cmd: compileSnippet
+  api=8 type=1 insize=19971 outsize=2617 kw= ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=20009 outsize=1298 kw= ok=1
+Cmd: compileSnippet
+  api=1 type=1 insize=20009 outsize=397 kw= ok=1
+Cmd: compileSnippet
+  api=1 type=0 insize=19977 outsize=335 kw= ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=19977 outsize=933 kw= ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=20014 outsize=1298 kw= ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=20014 outsize=3143 kw= ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=20007 outsize=1298 kw= ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=20007 outsize=2615 kw= ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=20010 outsize=1298 kw= ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=20010 outsize=3427 kw= ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=20016 outsize=1298 kw= ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=20016 outsize=3996 kw= ok=1
+Cmd: compileSnippet
+  api=1 type=0 insize=20013 outsize=318 kw= ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=20013 outsize=3143 kw= ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=20006 outsize=1298 kw= ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=20006 outsize=4248 kw= ok=1
+Cmd: compileSnippet
+  api=1 type=0 insize=20011 outsize=318 kw= ok=1
+Cmd: compileSnippet
+  api=1 type=1 insize=20011 outsize=20714 kw= ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=1742 outsize=1713 kw= ok=1
+Cmd: compileSnippet
+  api=8 type=0 insize=1742 outsize=2446 kw= ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=1742 outsize=3248 kw= ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=32654 outsize=990 kw= ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=32654 outsize=10610 kw= ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=3672 outsize=1753 kw= ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=3672 outsize=4557 kw= ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=6827 outsize=1380 kw= ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=6827 outsize=4345 kw= ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=4129 outsize=2200 kw= ok=1
+Cmd: compileSnippet
+  api=8 type=0 insize=4129 outsize=3088 kw= ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=4129 outsize=4297 kw= ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=4135 outsize=2200 kw= ok=1
+Cmd: compileSnippet
+  api=8 type=0 insize=4135 outsize=3088 kw= ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=4135 outsize=3362 kw= ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=3311 outsize=990 kw= ok=1
+Cmd: compileSnippet
+  api=8 type=0 insize=3311 outsize=1438 kw= ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=3311 outsize=1258 kw= ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=3319 outsize=2135 kw= ok=1
+Cmd: compileSnippet
+  api=8 type=0 insize=3319 outsize=3015 kw= ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=3319 outsize=1835 kw= ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=3328 outsize=2119 kw= ok=1
+Cmd: compileSnippet
+  api=8 type=0 insize=3328 outsize=2909 kw= ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=3328 outsize=2192 kw= ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=3323 outsize=2119 kw= ok=1
+Cmd: compileSnippet
+  api=8 type=0 insize=3323 outsize=2909 kw= ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=3323 outsize=2030 kw= ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=714 outsize=990 kw= ok=1
+Cmd: compileSnippet
+  api=8 type=0 insize=714 outsize=1438 kw= ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=714 outsize=713 kw= ok=1
