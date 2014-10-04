@@ -2,201 +2,209 @@ Base path: /Applications/Unity/Unity.app/Contents
 Pipe name: \\.\pipe\UnityShaderCompiler-2--1335607296
 Cmd: getPlatforms
 Cmd: compileSnippet
-  api=1 type=0 insize=10526 outsize=132 kw= ok=1
+  api=5 type=0 insize=10526 outsize=1706 kw= ok=1
 Cmd: compileSnippet
-  api=1 type=1 insize=10526 outsize=460 kw= ok=1
+  api=5 type=1 insize=10526 outsize=6 kw= ok=1
 Cmd: compileSnippet
-  api=8 type=1 insize=10526 outsize=2560 kw= ok=1
+  api=5 type=0 insize=10549 outsize=8353 kw= ok=1
 Cmd: compileSnippet
-  api=1 type=0 insize=10549 outsize=156 kw= ok=1
+  api=5 type=1 insize=10549 outsize=6 kw= ok=1
 Cmd: compileSnippet
-  api=1 type=1 insize=10549 outsize=3842 kw= ok=1
+  api=5 type=0 insize=10548 outsize=8331 kw= ok=1
 Cmd: compileSnippet
-  api=1 type=0 insize=10548 outsize=156 kw= ok=1
+  api=5 type=1 insize=10548 outsize=6 kw= ok=1
 Cmd: compileSnippet
-  api=1 type=1 insize=10548 outsize=3819 kw= ok=1
+  api=5 type=0 insize=995 outsize=864 kw= ok=1
 Cmd: compileSnippet
-  api=1 type=0 insize=995 outsize=132 kw= ok=1
+  api=5 type=1 insize=995 outsize=6 kw= ok=1
 Cmd: compileSnippet
-  api=1 type=1 insize=995 outsize=217 kw= ok=1
+  api=5 type=0 insize=1183 outsize=2021 kw= ok=1
 Cmd: compileSnippet
-  api=1 type=0 insize=1183 outsize=351 kw= ok=1
+  api=5 type=1 insize=1183 outsize=6 kw= ok=1
 Cmd: compileSnippet
-  api=1 type=1 insize=1183 outsize=254 kw= ok=1
+  api=9 type=0 insize=4822 outsize=3269 kw=DIRECTIONAL SHADOWS_OFF LIGHTMAP_OFF DIRLIGHTMAP_OFF ok=1
 Cmd: compileSnippet
-  api=8 type=1 insize=1183 outsize=1983 kw= ok=1
+  api=9 type=0 insize=4822 outsize=1251 kw=DIRECTIONAL SHADOWS_OFF LIGHTMAP_ON DIRLIGHTMAP_OFF ok=1
 Cmd: compileSnippet
-  api=1 type=0 insize=2000 outsize=335 kw= ok=1
+  api=9 type=0 insize=4822 outsize=4019 kw=DIRECTIONAL SHADOWS_SCREEN LIGHTMAP_OFF DIRLIGHTMAP_OFF ok=1
 Cmd: compileSnippet
-  api=1 type=1 insize=2000 outsize=206 kw= ok=1
+  api=9 type=0 insize=4822 outsize=1999 kw=DIRECTIONAL SHADOWS_SCREEN LIGHTMAP_ON DIRLIGHTMAP_OFF ok=1
 Cmd: compileSnippet
-  api=8 type=1 insize=2000 outsize=1739 kw= ok=1
+  api=9 type=0 insize=4822 outsize=4355 kw=DIRECTIONAL SHADOWS_OFF LIGHTMAP_OFF DIRLIGHTMAP_OFF VERTEXLIGHT_ON ok=1
 Cmd: compileSnippet
-  api=1 type=0 insize=1998 outsize=335 kw= ok=1
+  api=9 type=0 insize=4822 outsize=5105 kw=DIRECTIONAL SHADOWS_SCREEN LIGHTMAP_OFF DIRLIGHTMAP_OFF VERTEXLIGHT_ON ok=1
 Cmd: compileSnippet
-  api=1 type=1 insize=1998 outsize=117 kw= ok=1
+  api=9 type=0 insize=4822 outsize=3859 kw=DIRECTIONAL SHADOWS_SCREEN SHADOWS_NATIVE LIGHTMAP_OFF DIRLIGHTMAP_OFF ok=1
 Cmd: compileSnippet
-  api=8 type=1 insize=1998 outsize=1325 kw= ok=1
+  api=9 type=0 insize=4822 outsize=1839 kw=DIRECTIONAL SHADOWS_SCREEN SHADOWS_NATIVE LIGHTMAP_ON DIRLIGHTMAP_OFF ok=1
 Cmd: compileSnippet
-  api=1 type=0 insize=2011 outsize=329 kw= ok=1
+  api=9 type=0 insize=4822 outsize=4945 kw=DIRECTIONAL SHADOWS_SCREEN SHADOWS_NATIVE LIGHTMAP_OFF DIRLIGHTMAP_OFF VERTEXLIGHT_ON ok=1
 Cmd: compileSnippet
-  api=1 type=1 insize=2011 outsize=242 kw= ok=1
+  api=5 type=1 insize=4822 outsize=6 kw=DIRECTIONAL SHADOWS_OFF LIGHTMAP_OFF DIRLIGHTMAP_OFF ok=1
 Cmd: compileSnippet
-  api=8 type=1 insize=2011 outsize=1893 kw= ok=1
+  api=9 type=1 insize=4822 outsize=7 kw=DIRECTIONAL SHADOWS_OFF LIGHTMAP_ON DIRLIGHTMAP_OFF ok=1
 Cmd: compileSnippet
-  api=1 type=0 insize=2009 outsize=335 kw= ok=1
+  api=5 type=1 insize=4822 outsize=6 kw=DIRECTIONAL SHADOWS_SCREEN LIGHTMAP_OFF DIRLIGHTMAP_OFF ok=1
 Cmd: compileSnippet
-  api=1 type=1 insize=2009 outsize=101 kw= ok=1
+  api=5 type=1 insize=4822 outsize=6 kw=DIRECTIONAL SHADOWS_SCREEN LIGHTMAP_ON DIRLIGHTMAP_OFF ok=1
 Cmd: compileSnippet
-  api=8 type=1 insize=2009 outsize=1187 kw= ok=1
+  api=5 type=0 insize=2798 outsize=2622 kw=POINT ok=1
 Cmd: compileSnippet
-  api=1 type=0 insize=968 outsize=132 kw= ok=1
+  api=9 type=0 insize=2798 outsize=2003 kw=DIRECTIONAL ok=1
 Cmd: compileSnippet
-  api=1 type=1 insize=968 outsize=249 kw= ok=1
+  api=5 type=0 insize=2798 outsize=2858 kw=SPOT ok=1
 Cmd: compileSnippet
-  api=8 type=1 insize=968 outsize=1503 kw= ok=1
+  api=5 type=0 insize=2798 outsize=2763 kw=POINT_COOKIE ok=1
 Cmd: compileSnippet
-  api=1 type=0 insize=32644 outsize=156 kw= ok=1
+  api=5 type=0 insize=2798 outsize=2354 kw=DIRECTIONAL_COOKIE ok=1
 Cmd: compileSnippet
-  api=1 type=1 insize=32644 outsize=4416 kw= ok=1
+  api=9 type=1 insize=2798 outsize=7 kw=POINT ok=1
 Cmd: compileSnippet
-  api=1 type=0 insize=1607 outsize=452 kw= ok=1
+  api=5 type=1 insize=2798 outsize=6 kw=DIRECTIONAL ok=1
 Cmd: compileSnippet
-  api=1 type=1 insize=1607 outsize=765 kw= ok=1
+  api=5 type=1 insize=2798 outsize=6 kw=SPOT ok=1
 Cmd: compileSnippet
-  api=8 type=1 insize=1607 outsize=3600 kw= ok=1
+  api=9 type=1 insize=2798 outsize=7 kw=SPOT ok=1
 Cmd: compileSnippet
-  api=1 type=0 insize=20010 outsize=318 kw= ok=1
+  api=9 type=1 insize=2798 outsize=7 kw=POINT_COOKIE ok=1
 Cmd: compileSnippet
-  api=1 type=1 insize=20010 outsize=293 kw= ok=1
+  api=5 type=1 insize=2798 outsize=6 kw=DIRECTIONAL_COOKIE ok=1
 Cmd: compileSnippet
-  api=1 type=0 insize=20005 outsize=318 kw= ok=1
+  api=5 type=0 insize=2000 outsize=844 kw= ok=1
 Cmd: compileSnippet
-  api=1 type=1 insize=20005 outsize=134 kw= ok=1
+  api=5 type=1 insize=2000 outsize=6 kw= ok=1
 Cmd: compileSnippet
-  api=1 type=0 insize=20021 outsize=733 kw= ok=1
+  api=9 type=0 insize=1998 outsize=819 kw= ok=1
 Cmd: compileSnippet
-  api=1 type=1 insize=20021 outsize=834 kw= ok=1
+  api=9 type=1 insize=1998 outsize=7 kw= ok=1
 Cmd: compileSnippet
-  api=1 type=0 insize=20006 outsize=318 kw= ok=1
+  api=9 type=0 insize=2011 outsize=1805 kw= ok=1
 Cmd: compileSnippet
-  api=1 type=1 insize=20006 outsize=293 kw= ok=1
+  api=9 type=1 insize=2011 outsize=7 kw= ok=1
 Cmd: compileSnippet
-  api=1 type=0 insize=20016 outsize=318 kw= ok=1
+  api=9 type=0 insize=2009 outsize=785 kw= ok=1
 Cmd: compileSnippet
-  api=1 type=1 insize=20016 outsize=276 kw= ok=1
+  api=9 type=1 insize=2009 outsize=7 kw= ok=1
 Cmd: compileSnippet
-  api=1 type=0 insize=20015 outsize=318 kw= ok=1
+  api=9 type=0 insize=968 outsize=1073 kw= ok=1
 Cmd: compileSnippet
-  api=1 type=1 insize=20015 outsize=7220 kw= ok=1
+  api=9 type=1 insize=968 outsize=7 kw= ok=1
 Cmd: compileSnippet
-  api=4 type=0 insize=19971 outsize=1298 kw= ok=1
+  api=9 type=0 insize=867 outsize=1123 kw= ok=1
 Cmd: compileSnippet
-  api=8 type=0 insize=19971 outsize=1512 kw= ok=1
+  api=9 type=1 insize=867 outsize=7 kw= ok=1
 Cmd: compileSnippet
-  api=4 type=1 insize=19971 outsize=1762 kw= ok=1
+  api=9 type=0 insize=1607 outsize=1946 kw= ok=1
 Cmd: compileSnippet
-  api=1 type=0 insize=20009 outsize=318 kw= ok=1
+  api=9 type=1 insize=1607 outsize=7 kw= ok=1
 Cmd: compileSnippet
-  api=4 type=1 insize=20009 outsize=1388 kw= ok=1
+  api=5 type=0 insize=20010 outsize=1060 kw= ok=1
 Cmd: compileSnippet
-  api=4 type=0 insize=19977 outsize=1298 kw= ok=1
+  api=5 type=1 insize=20010 outsize=6 kw= ok=1
 Cmd: compileSnippet
-  api=8 type=0 insize=19977 outsize=1512 kw= ok=1
+  api=9 type=0 insize=20005 outsize=811 kw= ok=1
 Cmd: compileSnippet
-  api=1 type=1 insize=19977 outsize=131 kw= ok=1
+  api=9 type=1 insize=20005 outsize=7 kw= ok=1
 Cmd: compileSnippet
-  api=8 type=1 insize=19977 outsize=1292 kw= ok=1
+  api=5 type=0 insize=20021 outsize=3691 kw= ok=1
 Cmd: compileSnippet
-  api=1 type=0 insize=20014 outsize=318 kw= ok=1
+  api=5 type=1 insize=20021 outsize=6 kw= ok=1
 Cmd: compileSnippet
-  api=1 type=1 insize=20014 outsize=3493 kw= ok=1
+  api=9 type=0 insize=20006 outsize=1084 kw= ok=1
 Cmd: compileSnippet
-  api=1 type=0 insize=20007 outsize=318 kw= ok=1
+  api=9 type=1 insize=20006 outsize=7 kw= ok=1
 Cmd: compileSnippet
-  api=1 type=1 insize=20007 outsize=4158 kw= ok=1
+  api=9 type=0 insize=20016 outsize=1127 kw= ok=1
 Cmd: compileSnippet
-  api=1 type=0 insize=20010 outsize=318 kw= ok=1
+  api=5 type=1 insize=20016 outsize=6 kw= ok=1
 Cmd: compileSnippet
-  api=1 type=1 insize=20010 outsize=8537 kw= ok=1
+  api=9 type=0 insize=20015 outsize=3077 kw= ok=1
 Cmd: compileSnippet
-  api=1 type=0 insize=20016 outsize=318 kw= ok=1
+  api=9 type=1 insize=20015 outsize=7 kw= ok=1
 Cmd: compileSnippet
-  api=1 type=1 insize=20016 outsize=8845 kw= ok=1
+  api=9 type=0 insize=19971 outsize=1519 kw= ok=1
 Cmd: compileSnippet
-  api=4 type=0 insize=20013 outsize=1298 kw= ok=1
+  api=9 type=1 insize=19971 outsize=7 kw= ok=1
 Cmd: compileSnippet
-  api=1 type=1 insize=20013 outsize=4356 kw= ok=1
+  api=9 type=0 insize=20009 outsize=1377 kw= ok=1
 Cmd: compileSnippet
-  api=1 type=0 insize=20006 outsize=318 kw= ok=1
+  api=9 type=1 insize=20009 outsize=7 kw= ok=1
 Cmd: compileSnippet
-  api=1 type=1 insize=20006 outsize=20881 kw= ok=1
+  api=9 type=0 insize=19977 outsize=840 kw= ok=1
 Cmd: compileSnippet
-  api=4 type=0 insize=20011 outsize=1298 kw= ok=1
+  api=9 type=1 insize=19977 outsize=7 kw= ok=1
 Cmd: compileSnippet
-  api=4 type=1 insize=20011 outsize=4743 kw= ok=1
+  api=9 type=0 insize=20014 outsize=2998 kw= ok=1
 Cmd: compileSnippet
-  api=1 type=0 insize=1742 outsize=339 kw= ok=1
+  api=9 type=1 insize=20014 outsize=7 kw= ok=1
 Cmd: compileSnippet
-  api=1 type=1 insize=1742 outsize=980 kw= ok=1
+  api=9 type=0 insize=20007 outsize=2890 kw= ok=1
 Cmd: compileSnippet
-  api=8 type=1 insize=1742 outsize=4818 kw= ok=1
+  api=9 type=1 insize=20007 outsize=7 kw= ok=1
 Cmd: compileSnippet
-  api=1 type=0 insize=32654 outsize=156 kw= ok=1
+  api=9 type=0 insize=20010 outsize=4388 kw= ok=1
 Cmd: compileSnippet
-  api=1 type=1 insize=32654 outsize=4414 kw= ok=1
+  api=9 type=1 insize=20010 outsize=7 kw= ok=1
 Cmd: compileSnippet
-  api=1 type=0 insize=3672 outsize=450 kw= ok=1
+  api=9 type=0 insize=20016 outsize=4859 kw= ok=1
 Cmd: compileSnippet
-  api=1 type=1 insize=3672 outsize=2057 kw= ok=1
+  api=5 type=1 insize=20016 outsize=6 kw= ok=1
 Cmd: compileSnippet
-  api=1 type=0 insize=6827 outsize=310 kw= ok=1
+  api=9 type=0 insize=20013 outsize=3362 kw= ok=1
 Cmd: compileSnippet
-  api=1 type=1 insize=6827 outsize=1855 kw= ok=1
+  api=9 type=1 insize=20013 outsize=7 kw= ok=1
 Cmd: compileSnippet
-  api=1 type=0 insize=4129 outsize=458 kw= ok=1
+  api=9 type=0 insize=20006 outsize=7226 kw= ok=1
 Cmd: compileSnippet
-  api=1 type=1 insize=4129 outsize=1043 kw= ok=1
+  api=9 type=1 insize=20006 outsize=7 kw= ok=1
 Cmd: compileSnippet
-  error: 2 plat 8 at (0): Program 'frag', error X4506: ps_4_0_level_9_1 input limit (8) exceeded, shader uses 9 inputs.
-  api=8 type=1 insize=4129 outsize=0 kw= ok=0
+  api=9 type=0 insize=20011 outsize=7680 kw= ok=1
 Cmd: compileSnippet
-  api=1 type=0 insize=4135 outsize=458 kw= ok=1
+  api=9 type=1 insize=20011 outsize=7 kw= ok=1
 Cmd: compileSnippet
-  api=1 type=1 insize=4135 outsize=813 kw= ok=1
+  api=9 type=0 insize=1742 outsize=3303 kw= ok=1
 Cmd: compileSnippet
-  error: 2 plat 8 at (0): Program 'fragDebug', error X4506: ps_4_0_level_9_1 input limit (8) exceeded, shader uses 9 inputs.
-  api=8 type=1 insize=4135 outsize=0 kw= ok=0
+  api=9 type=1 insize=1742 outsize=7 kw= ok=1
 Cmd: compileSnippet
-  api=1 type=0 insize=3311 outsize=132 kw= ok=1
+  api=9 type=0 insize=3672 outsize=5154 kw= ok=1
 Cmd: compileSnippet
-  api=1 type=1 insize=3311 outsize=232 kw= ok=1
+  api=9 type=1 insize=3672 outsize=7 kw= ok=1
 Cmd: compileSnippet
-  api=8 type=1 insize=3311 outsize=1861 kw= ok=1
+  api=9 type=0 insize=6827 outsize=4014 kw= ok=1
 Cmd: compileSnippet
-  api=1 type=0 insize=3319 outsize=364 kw= ok=1
+  api=9 type=1 insize=6827 outsize=7 kw= ok=1
 Cmd: compileSnippet
-  api=1 type=1 insize=3319 outsize=329 kw= ok=1
+  api=9 type=0 insize=4129 outsize=4817 kw= ok=1
 Cmd: compileSnippet
-  api=8 type=1 insize=3319 outsize=2608 kw= ok=1
+  api=9 type=1 insize=4129 outsize=7 kw= ok=1
 Cmd: compileSnippet
-  api=1 type=0 insize=3328 outsize=462 kw= ok=1
+  api=9 type=0 insize=4135 outsize=5256 kw= ok=1
 Cmd: compileSnippet
-  api=1 type=1 insize=3328 outsize=467 kw= ok=1
+  api=9 type=1 insize=4135 outsize=7 kw= ok=1
 Cmd: compileSnippet
-  api=8 type=1 insize=3328 outsize=3210 kw= ok=1
+  api=9 type=0 insize=1135 outsize=1197 kw= ok=1
 Cmd: compileSnippet
-  api=1 type=0 insize=3323 outsize=462 kw= ok=1
+  api=9 type=1 insize=1135 outsize=7 kw= ok=1
 Cmd: compileSnippet
-  api=1 type=1 insize=3323 outsize=464 kw= ok=1
+  api=9 type=0 insize=3311 outsize=826 kw= ok=1
 Cmd: compileSnippet
-  api=8 type=1 insize=3323 outsize=2974 kw= ok=1
+  api=9 type=1 insize=3311 outsize=7 kw= ok=1
 Cmd: compileSnippet
-  api=1 type=0 insize=714 outsize=132 kw= ok=1
+  api=9 type=0 insize=3319 outsize=2135 kw= ok=1
 Cmd: compileSnippet
-  api=1 type=1 insize=714 outsize=76 kw= ok=1
+  api=5 type=1 insize=3319 outsize=6 kw= ok=1
 Cmd: compileSnippet
-  api=8 type=1 insize=714 outsize=1008 kw= ok=1
+  api=9 type=0 insize=3328 outsize=2278 kw= ok=1
+Cmd: compileSnippet
+  api=9 type=1 insize=3328 outsize=7 kw= ok=1
+Cmd: compileSnippet
+  api=9 type=0 insize=3323 outsize=2261 kw= ok=1
+Cmd: compileSnippet
+  api=5 type=1 insize=3323 outsize=6 kw= ok=1
+Cmd: compileSnippet
+  api=5 type=0 insize=714 outsize=631 kw= ok=1
+Cmd: compileSnippet
+  api=9 type=1 insize=714 outsize=7 kw= ok=1
 End of pipe
 
 Quitting shader compiler process

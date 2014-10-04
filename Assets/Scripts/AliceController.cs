@@ -36,6 +36,11 @@ public class AliceController : MonoBehaviour
 		string text;
 		text = "Manual Size Changing: " + manualSizeChanging;
 		GUI.Box (new Rect (Screen.width - 200, 0, 200, 30), text);
+
+//		if (GUI.Button (new Rect (0, Screen.height - 100, 100, 100), "go")) {
+//			playercont = gameObject.GetComponent<ThirdPersonControllerCS> ();
+//			playercont._characterState = ThirdPersonControllerCS.CharacterState.Running;
+//		}
 	}
 
 

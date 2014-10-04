@@ -6,7 +6,7 @@ public class ThirdPersonControllerCS: MonoBehaviour {
 	public AnimationClip walkAnimation;
 	public AnimationClip runAnimation;
 	public AnimationClip jumpPoseAnimation;
-	
+
 	public float walkMaxAnimationSpeed = 0.75F;
 	public float trotMaxAnimationSpeed = 1F;
 	public float runMaxAnimationSpeed = 1F;
@@ -15,14 +15,14 @@ public class ThirdPersonControllerCS: MonoBehaviour {
 	
 	private Animation _animation;
 	
-	enum CharacterState {
+	public enum CharacterState {
 		Idle = 0,
 		Walking = 1,
 		Trotting = 2,
 		Running = 3,
 		Jumping = 4,   
 	}
-	private CharacterState _characterState;
+	public CharacterState _characterState;
 	// The speed when walking
 	public float walkSpeed = 2.0F;
 	// after trotAfterSeconds of walking we trot with trotSpeed
