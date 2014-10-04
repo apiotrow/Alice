@@ -77,7 +77,7 @@ public class AliceController : MonoBehaviour
 		RenderSettings.fog = false;
 		RenderSettings.fogEndDistance = minScale * fogEndDistanceMultiplier;
 
-		manualSizeChanging = false;
+		manualSizeChanging = true;
 	}
 
 
