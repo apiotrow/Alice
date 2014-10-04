@@ -46,6 +46,7 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Medieval_House\Scripts\OpenDoor.js" />
      <Compile Include="Assets\city_lowpoly\Standard Assets\Image Effects (Pro Only)\AntialiasingAsPostEffect.js" />
      <Compile Include="Assets\city_lowpoly\Standard Assets\Image Effects (Pro Only)\BloomAndLensFlares.js" />
      <Compile Include="Assets\city_lowpoly\Standard Assets\Image Effects (Pro Only)\CameraInfo.js" />
@@ -73,6 +74,7 @@
      <None Include="Assets\city_lowpoly\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_DepthOfField\SeparableWeightedBlurDof34.shader" />
      <None Include="Assets\city_lowpoly\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\ShowAlphaChannel.shader" />
      <None Include="Assets\city_lowpoly\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\GlowConeTap.shader" />
+     <None Include="Assets\Medieval_House\Info.txt" />
      <None Include="Assets\city_lowpoly\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\SunShaftsComposite.shader" />
      <None Include="Assets\city_lowpoly\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\ColorCorrectionCurves.shader" />
      <None Include="Assets\city_lowpoly\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_Antialiasing\NFAA.shader" />
