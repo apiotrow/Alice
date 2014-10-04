@@ -2,10 +2,9 @@
 -target:library
 -nowarn:0169
 -out:'Temp/Assembly-CSharp.dll'
--r:'/Applications/Unity/Unity.app/Contents/Frameworks/Managed/UnityEngine.dll'
+-r:'/Applications/Unity/Unity.app/Contents/PlaybackEngines/AndroidPlayer/Managed/UnityEngine.dll'
 -r:'Library/ScriptAssemblies/Assembly-CSharp-firstpass.dll'
 -r:'Library/ScriptAssemblies/Assembly-UnityScript-firstpass.dll'
--r:'/Applications/Unity/Unity.app/Contents/Frameworks/Managed/UnityEditor.dll'
 -define:UNITY_4_5_1
 -define:UNITY_4_5
 -define:UNITY_ANDROID
@@ -34,10 +33,6 @@
 -define:ENABLE_AUDIO
 -define:ENABLE_NAVMESH_CARVING
 -define:ENABLE_SINGLE_INSTANCE_BUILD_SETTING
--define:ENABLE_PROFILER
--define:UNITY_EDITOR
--define:UNITY_EDITOR_OSX
--define:UNITY_TEAM_LICENSE
 -define:UNITY_PRO_LICENSE
 'Assets/AliceStyleCharacter/Script/CharaterManeger.cs'
 'Assets/EasyTouch/Example/C# Example/Example for EasyButton/Bullet.cs'
