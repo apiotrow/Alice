@@ -82,7 +82,7 @@ public class AliceController : MonoBehaviour
 		RenderSettings.fog = false;
 		RenderSettings.fogEndDistance = minScale * fogEndDistanceMultiplier;
 
-		manualSizeChanging = false;
+		manualSizeChanging = true;
 	}
 
 
@@ -141,8 +141,8 @@ public class AliceController : MonoBehaviour
 
 	void sizeChangeByDistanceToObject(Transform obj, float multiplier){
 		float distToObject;
-//		distToObject = Vector3.Distance (obj.position, transform.position);
-//		newScale = distToObject * multiplier;
+		distToObject = Vector3.Distance (obj.position, transform.position);
+		newScale = distToObject * multiplier;
 	}
 
 
