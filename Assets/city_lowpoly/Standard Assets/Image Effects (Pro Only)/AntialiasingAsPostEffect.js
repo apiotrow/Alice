@@ -3,7 +3,7 @@
 
 @script ExecuteInEditMode
 @script RequireComponent (Camera)
-@script AddComponentMenu ("Image Effects/Antialiasing (Fullscreen)")
+@script AddComponentMenu ("Image Effects/Other/Antialiasing")
 
 enum AAMode {
 	FXAA2 = 0,
@@ -101,7 +101,7 @@ class AntialiasingAsPostEffect extends PostEffectsBase  {
 			Graphics.Blit (source, destination);
 			return;
 		}
-				
+
  		// .............................................................................
 		// FXAA antialiasing modes .....................................................
 		
@@ -155,7 +155,7 @@ class AntialiasingAsPostEffect extends PostEffectsBase  {
 		}
 		else {
 			// none of the AA is supported, fallback to a simple blit
-			Graphics.Blit (source, destination);								
+			Graphics.Blit (source, destination);
 		}
 	}
 }

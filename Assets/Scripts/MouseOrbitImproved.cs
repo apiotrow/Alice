@@ -50,15 +50,15 @@ public class MouseOrbitImproved : MonoBehaviour
 			Vector3 desiredCameraPos = transform.TransformPoint (dollyDir * maxDistance);
 			
 			RaycastHit hit;
-//			if (Physics.Linecast (target.position, transform.position, out hit)) {
-//				//distance -=  hit.distance;
-//			}
+			if (Physics.Linecast (target.position, transform.position, out hit)) {
+//				distance -=  hit.distance;
+			}
 			if (Physics.Linecast (transform.position, desiredCameraPos, out hit)) {
-				//distance = Mathf.Clamp( hit.distance, minDistance, maxDistance );
-				
-				//distance = Mathf.MoveTowards (hit.distance, hit.distance - 1, Time.deltaTime * 5f); 
+//				distance = Mathf.Clamp( hit.distance, minDistance, maxDistance );
+//				
+//				distance = Mathf.MoveTowards (hit.distance, hit.distance - 1, Time.deltaTime * 5f); 
 			} else {
-				//distance = maxDistance;
+//				distance = maxDistance;
 			}
 			Vector3 negDistance = new Vector3 (0.0f, 0.0f, -distance);
 			Vector3 position = rotation * negDistance + target.position;
