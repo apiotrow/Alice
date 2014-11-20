@@ -4,7 +4,7 @@ using System.Collections;
 public class AliceController : MonoBehaviour
 {
 	public AlicePlanet alicePlanet;
-	public Transform makeSmallerObject;
+	//public Transform makeSmallerObject;
 
 	public MouseOrbitImproved cam;
 	public ThirdPersonControllerCS playercont;
@@ -148,7 +148,7 @@ public class AliceController : MonoBehaviour
 
 	void handleSizeChange(){
 		if (!manualSizeChanging) {
-			sizeChangeByDistanceToObject (makeSmallerObject, 0.1f);
+			//sizeChangeByDistanceToObject (makeSmallerObject, 0.1f);
 		} else {
 			sizeChangeByInput ();
 		}
