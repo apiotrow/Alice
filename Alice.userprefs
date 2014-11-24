@@ -1,8 +1,8 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace />
-  <MonoDevelop.Ide.Workbench ActiveDocument="../CrowdSimulation/Assets/DragRigidBodyCSharp.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/AliceController.cs">
     <Files>
-      <File FileName="../CrowdSimulation/Assets/DragRigidBodyCSharp.cs" Line="49" Column="3" />
+      <File FileName="Assets/Scripts/AliceController.cs" Line="113" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
